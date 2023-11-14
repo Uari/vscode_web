@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+ul{
+    list-style: none; /* 구슬 없앰 - li 가 구슬을 ul에서 없어짐 - 캡쳐링 */
+}
+
+header{
+    width: 100%; /* 반응형 웹 */
+    display: flex; /* ul>li로우가 늘어남 좌우 펼침 */
+    justify-content: space-between;
+    align-items: center;
+    /* top: 0px; */
+    /* left: 0px; */
+    color: white;
+    z-index: 2;
+}
+
+header h1{  /* 메뉴바의 사이트명  */
+    font: 60px normal;
+    color: aqua;
+    z-index: 2;
+}
+
+header .gnb li{  /* 메뉴바 li구성 글자사이 간격 */
+    font : bold 20px normal;
+    margin: 5px 20px;
+}
+
+.gnb{
+    display: flex;
+    z-index: 2;
+}
+
+.sns{
+    display: flex;
+    z-index: 2;
+}
+
+header .sns li{
+    margin: 5px 5px;
+}
+
+header .sns li a{
+    font: 16px normal;
+    color: white;
+}

@@ -1,0 +1,128 @@
+*{
+    /* border: 1px solid red; */
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(./img/Fotolia_235948322_XL.jpg) no-repeat center;
+    z-index: -1;
+    background-size: cover;
+    top: 0px;
+    left: 0px;
+}
+
+.login_form {
+    position: absolute;
+    width: 100%;
+    max-width: 360px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: ghostwhite;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.login_form h1 {
+    font: bold 48px normal;
+    margin-bottom: 20px;
+}
+
+.login_form p {
+    margin-bottom: 40px;
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 40px;
+    display: block;
+}
+
+input[type = "email"] {
+    width: 100%;
+    display:  block;
+    height: 32px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+
+input[type = "email"]:hover{
+    border-bottom: 1px solid gray;
+}
+
+input[type = "email"]:focus {
+    border-bottom: 2px solid blueviolet;
+    outline: none;
+}
+
+.btn_submit {
+    width: 80px;
+    padding: 8px;
+    background-color: blueviolet;
+    color: ghostwhite;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    float: right;
+}
+
+.divider {
+    clear: both;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.divider hr {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: gray;
+    z-index: 1;
+}
+
+.divider span {
+    position: relative;
+    padding: 0 10px;
+    display: inline;
+    color: black;
+    background-color: ghostwhite;
+    z-index: 2;
+}
+
+.login_form button {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.btn_google {
+    background-color: ghostwhite;
+    border: 1px solid lightgray;
+}
+
+.btn_facebook {
+    background-color: rgba(5, 5, 168, 0.867);
+    color: ghostwhite;
+}
+
+/* 구글로그인과 페이스북 로그인 버튼 완성 */
+.icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    float: left;
+}
+
+.icon-google {
+    background: url(./img/icon-google.svg) no-repeat center/20px;
+}
+.icon-facebook {
+    background: url(./img/icon-facebook.svg) no-repeat center/20px;
+}

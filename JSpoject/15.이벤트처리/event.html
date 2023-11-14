@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event 이해</title>
+  <script src="event.js" defer></script>
+</head>
+<body>
+  <a href="#">링크</a>
+</body>
+</html>
+<!-- 
+  1. 사용자가 발생시키는 이벤트
+  :click, mouseover, mousemove, scroll, mousewheel, keyEvent
+  2. 시스템이 발생시키는 이벤트 
+  : load, error
+
+  이벤트 연결 방법
+  1. 이벤트 핸들러 이용하는 방법
+    DOM요소.onClick = () => {}
+  2. 내장함수를 이용하는 방법
+  :두번째 파라미터에 있는 함수를 콜백함수라고 하고 이벤트명에 해당하는 이벤트가 발동하면 자동으로 실행
+  DOM.요소.addEventListener('이벤트명{on뺀}', () => {})  // {}->콜백함수
+  3. 
+-->

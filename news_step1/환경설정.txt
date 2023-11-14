@@ -1,0 +1,8 @@
+번들러 설치
+npm install -g parcel-bundler
+npm init -y 
+
+Parcel 은 파일 변화를 자동으로 다시 빌드(rebuild) 하고 빠른 모듈 교체를 지원하는 내장 개발용
+ 서버가 있어 빠른 개발이 가능해 집니다. 그저 진입 파일을 지정하면 됩니다:
+
+ parcel index.html

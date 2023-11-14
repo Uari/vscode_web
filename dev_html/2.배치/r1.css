@@ -1,0 +1,24 @@
+*{
+    border: 1px solid red;
+}
+
+.container{
+    background-color: black;
+    position: relative;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    margin-bottom: 10px;
+}
+
+.box{
+    background-color: red;
+    /* 부모인 container에서 가로세로 20px 띄워진 위치에 출력 
+        내가 담긴 상자 안에서 움직임*/
+    position: absolute;
+    left: 20px; /* x축으로 이동 */
+    top: 20px; /* y축으로 이동 */
+}

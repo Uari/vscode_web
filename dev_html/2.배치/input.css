@@ -1,0 +1,13 @@
+body{
+    background-color: ivory;
+}
+
+.div{
+    color: black;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.table td{
+    padding-right: 30px;
+}

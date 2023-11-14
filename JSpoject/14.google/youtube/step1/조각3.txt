@@ -1,0 +1,4 @@
+//키워드 - innerHTML, innerText
+//jquery - xxx.html() or xxx.text()
+document.querySelector('#root').innerHTML = content;
+

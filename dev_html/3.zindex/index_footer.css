@@ -1,0 +1,11 @@
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: aliceblue;
+    z-index: 2;
+    text-align: center;
+    font: 0.9em/1 "arial";
+    letter-spacing: 3px;
+}

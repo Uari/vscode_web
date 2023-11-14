@@ -1,0 +1,42 @@
+.wrap{
+    width: 800px;
+    border: 10px solid black;
+    margin: 100px auto;
+}
+
+.wrap .left{
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+    float: left;
+}
+.wrap .right{
+    width: 400px;
+    height: 400px;
+    background-color:  hotpink;
+    float: left;
+    position: relative;
+}
+
+.right p {
+    width: 100px;
+    height: 100px;
+    background-color: lightgrey;
+    position: absolute;
+    float: right;
+    bottom: 0px;
+    right: 0px;
+}
+
+.bottom{
+    width: 800px;
+    height: 100px;
+    background-color: aquamarine;
+    clear: both;
+}
+
+/* .wrap ::after{
+    content: "";
+    display: block;
+    clear: both;
+} */

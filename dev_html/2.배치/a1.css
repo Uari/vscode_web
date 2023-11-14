@@ -1,0 +1,38 @@
+/* id - #, class - .  */
+.wrap{
+    width: 800px;
+    border: 10px solid black;
+    margin: 100px auto;
+}
+
+.left{
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    float: left;
+}
+
+.right{
+    width: 400px;
+    height: 400px;
+    background-color: hotpink;
+    float: left;
+}
+
+.bottom{
+    width: 800px;
+    height: 100px;
+    background-color: chartreuse;
+    clear: both;
+    /* float: left; */
+}
+
+/* 가상선택자는 인라인(inline)요소 */
+/* 부모요소에 무조건 가상 선택자를 사용해서 부모요소가 자손요소를 감싸게 해줌
+    clear - .wrap에 float를 주면 항상 하위 태그가 밀림 하위 태그에 
+    clear:both를 주어서 밀림을 방어함 */
+.wrap::after{
+    content: "";
+    display: block;
+    clear: both;
+}

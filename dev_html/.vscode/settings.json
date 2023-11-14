@@ -1,0 +1,10 @@
+//비주얼 스튜디오의 로컬 세팅
+{
+  "editor.tabSize": 4,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.maxTokenizationLineLength": 2500
+  }
+}

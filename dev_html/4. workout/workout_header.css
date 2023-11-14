@@ -1,0 +1,13 @@
+.header {
+    padding-top: 5px;
+    height: 48px;
+    font: bold 24px normal;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(212, 94, 196, 1) 51%,
+        rgba(0, 212, 255, 1) 100%
+      );
+    color: aquamarine;
+    border-radius: 20px 20px 0 0;
+}
