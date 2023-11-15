@@ -1,0 +1,22 @@
+<img id="imgDetail" src="../../images/sample/회의-2.jpg" alt="사진"/>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" defer></script>
+
+<script>
+  $(document).ready(()=>{
+    console.log('pictureDetail.html');
+    const queryString = new URLSearchParams(location.search);
+    const cid = queryString.get("id");
+    const pics = ["회의-1.jpg","회의-2.jpg","회의-3.jpg","회의-4.jpg"];
+    let img;
+    
+    for(let i = 0; i<pics.length; i++){
+      //선택한 id와 배열의 index가 같은가?
+      
+      if(cid == (i+1)){
+        img = pics[i];
+        console.log(img);
+        $('#imgDetail').attr("src", `../../images/sample/${img}`)
+      }
+    }
+  })
+</script>

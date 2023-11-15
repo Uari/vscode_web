@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기본달력 테스트 - 실습</title>
+  </head>
+  <body>
+    <div id="calendar"></div>
+    <!-- CDM 방식으로 import -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js"></script>
+    <script>
+      //const ajax = new XMLHttpRequest();
+      // getData = (url) => {
+      // //arrow function 으로 처리 - ES6추가된 컨벤션
+      // ajax.open("GET", url, false);
+      // ajax.send();
+      // return JSON.parse(ajax.response);
+      // };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const calendarEl = document.querySelector("#calendar");
+
+        const getData = (info, successCallback, failureCallback) => $.ajax({
+          type: "GET",
+          url: "./event2.json",
+          dataType: "json",
+          success: function (data) {
+            console.log(data);
+            console.log(JSON.stringify(data));
+            return successCallback(data);
+          },
+        });
+
+        //calendar 객체 생성 및 생성자 호출 - 초기화 속성값 지정
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          headerToolbar: {
+            left: "prev, next, today",
+            center: "title",
+            right: "dayGridMonth, timeGridWeek, listWeek",
+          },
+
+          //일정에 대한 데이터 셋 가져오기
+          eventSources: [
+            {
+              events: getData,
+            }
+          ],
+        });
+        calendar.render(); //위에서 초기화된 정보로 달력을 그려줌
+      });
+    </script>
+  </body>
+</html>

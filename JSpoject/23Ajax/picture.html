@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="./picture.css">
+  <script>
+    startMethod=(td)=>{
+      // console.log('startMethod');
+      //createRequest(); //전역변수로 선언 - 함수 호출 만으로 생성됨
+      const cid = $(td).attr("id");
+      console.log(cid);
+
+      //GET 방식 - 최초 한번은 서버에 요청하고 응답을 받아오지만 동일한 요청이 반복되면 인터셉터를 하여 버퍼 캐시 메모리에 있는 응답을 가져온다.
+      //POST 방식 - 브라우저로 부터 인터셉터를 안당함 - body에 값이 담겨서 노출되지 않음 - 무조건 서버로 전달
+      $.ajax({
+        type: "GET",
+        url: `pictureDetail.html?id=${cid}&timestamp=${new Date().getTime()}`,
+        dataType: "html",
+        data: {url: "1"},
+        success: function(data){
+          $("#d_pic").html(data);
+        }
+      })
+    }
+    clearMethod=()=>{
+      // console.log('clearMethod');
+      $("#d_pic").html(""); //html() : 태그는 인터프리터 됨 / text() : 태그그대로 출력됨
+    }
+    
+    moveTo = () =>{
+      //새로운 페이지가 열림
+      //기존의 요청이 끊어짐 기존에 쥐고 있던 값 접근 불가 -> 쿠키와 세션 알아야하는 이유 
+      location.href="pictureChange.html";
+    }
+  </script>
+</head>
+<body>
+  <div id="d_pic">상세사진</div>
+  <table border="1">
+    <thead>
+      <th colspan="2">그림 목록</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">
+          <img src="../../images/sample/회의-1.jpg" width="50" height="50" />
+        </td>
+        <td id="1" onmouseover="startMethod(this)" onmouseout="clearMethod()">
+          사진1
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <img src="../../images/sample/회의-2.jpg" width="50" height="50" />
+        </td>
+        <td id="2" onmouseover="startMethod(this)" onmouseout="clearMethod()">
+          사진2
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <img src="../../images/sample/회의-3.jpg" width="50" height="50" />
+        </td>
+        <td id="3" onmouseover="startMethod(this)" onmouseout="clearMethod()">
+          사진3
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <img src="../../images/sample/회의-4.jpg" width="50" height="50" />
+        </td>
+        <td id="4" onmouseover="startMethod(this)" onmouseout="clearMethod()">
+          사진4
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" value="이동" onclick="moveTo()">
+</body>
+</html>
